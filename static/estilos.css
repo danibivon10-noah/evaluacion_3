@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedor {
+    max-width: 420px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+h1 {
+    color: #9a6cd6;
+    font-size: 24px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.boton,
+button {
+    background-color: #c58dbe;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover,
+button:hover {
+    background-color: #a786db;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #b0b8c4;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.resultado.ok {
+    background-color: #a6dffa;
+    color: #070006;
+}
+
+.resultado.mal {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 20px;
+    color: #a262c7;
+}

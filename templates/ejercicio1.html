@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block titulo %}Ejercicio 1{% endblock %}
+
+{% block contenido %}
+    <h1>Ejercicio 1: Notas y asistencia</h1>
+    <form method="POST" action="/ejercicio1">
+        <label>Nota 1:</label>
+        <input type="number" name="nota1" min="10" max="70" step="0.1" required>
+        <label>Nota 2:</label>
+        <input type="number" name="nota2" min="10" max="70" step="0.1" required>
+        <label>Nota 3:</label>
+        <input type="number" name="nota3" min="10" max="70" step="0.1" required>
+        <label>Asistencia (%):</label>
+        <input type="number" name="asistencia" min="0" max="100" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if estado %}
+        <div class="resultado {{ 'ok' if estado == 'Aprobado' else 'mal' }}">
+            <p>Promedio: {{ promedio }}</p>
+            <p>Estado: {{ estado }}</p>
+        </div>
+    {% endif %}
+
+    <a class="volver" href="/">Volver al menú</a>
+{% endblock %}

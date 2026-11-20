@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block titulo %}Ejercicio 2{% endblock %}
+
+{% block contenido %}
+    <h1>Ejercicio 2: Nombre más largo</h1>
+    <form method="POST" action="/ejercicio2">
+        <label>Nombre 1:</label>
+        <input type="text" name="nombre1" required>
+        <label>Nombre 2:</label>
+        <input type="text" name="nombre2" required>
+        <label>Nombre 3:</label>
+        <input type="text" name="nombre3" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if nombre_largo %}
+        <div class="resultado ok">
+            <p>El nombre con mayor cantidad de caracteres es: {{ nombre_largo }}</p>
+            <p>Cantidad de caracteres: {{ cantidad }}</p>
+        </div>
+    {% endif %}
+
+    <a class="volver" href="/">Volver al menú</a>
+{% endblock %}
